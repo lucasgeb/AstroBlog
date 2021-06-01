@@ -1,0 +1,22 @@
+{
+  "name": "astroblog",
+  "version": "1.0.0",
+  "description": "Blog de Astronomia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasgeb/AstroBlog.git"
+  },
+  "keywords": [
+    "Astroblog"
+  ],
+  "author": "Lucas Gebhardt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasgeb/AstroBlog/issues"
+  },
+  "homepage": "https://github.com/lucasgeb/AstroBlog#readme"
+}
