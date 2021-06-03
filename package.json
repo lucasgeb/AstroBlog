@@ -4,7 +4,7 @@
   "description": "Blog de Astronomia",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/lucasgeb/AstroBlog/issues"
   },
-  "homepage": "https://github.com/lucasgeb/AstroBlog#readme"
+  "homepage": "https://github.com/lucasgeb/AstroBlog#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
