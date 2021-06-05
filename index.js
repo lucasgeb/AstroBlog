@@ -1,42 +1,54 @@
-const express = require('express')
+const express = require('express');
+const hbs = require('hbs');
+const app = express();
+// const path = require('path') este no iría con
 
-const app = express()
-const path = require('path')
+const port = process.env.PORT || 3000;
 
-app.listen(3000, () => {
-    console.log('Aplicación corriendo en el puerto 3000')
-    })
+//TODO: Requerimos de (hbs);
+app.set('view engine', 'hbs');
 
-//rutas
-app.get("/blog", (request, response) => {
-    response.sendfile(path.resolve(__dirname, 'paginas/blog.html'))
-    })
+//TODO: Parciales
+hbs.registerPartials( __dirname + '/views/partials');
 
-app.get("/blogs", (request, response) => {
-    response.sendfile(path.resolve(__dirname, 'paginas/blogs.html'))
-    })
 
-app.get("/dailyimagen", (request, response) => {
-    response.sendfile(path.resolve(__dirname, 'paginas/dailyimagen.html'))
-    })
 
-app.get("/", (request, response) => {
-    response.sendfile(path.resolve(__dirname, 'paginas/index.html'))
-    })
+//rutas para servir contenido estástico
+app.use( express.static('public'))
 
-app.get("/perfil", (request, response) => {
-    response.sendfile(path.resolve(__dirname, 'paginas/perfil.html'))
-    })
+app.get('/blog', function (req, res) {
+    res.render('blog')
+  });
 
-app.get("/post1", (request, response) => {
-    response.sendfile(path.resolve(__dirname, 'paginas/post1.html'))
-    })
+app.get('/blogs', function (req, res) {
+    res.render('blogs')
+  });
 
-app.get("/post2", (request, response) => {
-    response.sendfile(path.resolve(__dirname, 'paginas/post2.html'))
-    })
+app.get('/dailyimagen', function (req, res) {
+    res.render('dailyimagen')
+  });
 
-app.get("/post3", (request, response) => {
-    response.sendfile(path.resolve(__dirname, 'paginas/post3.html'))
-    })
+app.get('/', function (req, res) {
+    res.render('index')
+  });
 
+app.get('/perfil', function (req, res) {
+    res.render('perfil')
+  });
+
+app.get('/post1', function (req, res) {
+    res.render('post1')
+  });
+
+app.get('/post2', function (req, res) {
+    res.render('post2')
+  });
+
+app.get('/post3', function (req, res) {
+    res.render('post3')
+  });
+
+app.listen(port, () => {
+
+    console.log(`Escuchando el servidor en el puerto http://localhost:${port}`);
+});
