@@ -14,38 +14,54 @@ hbs.registerPartials( __dirname + '/views/partials');
 
 
 //rutas para servir contenido estástico
-app.use( express.static('public'))
+app.use( express.static('public'));
 
 app.get('/blog', function (req, res) {
-    res.render('blog')
+    res.render('blog', {
+      titulo: "AtroBlog by Lucas Gebhardt"
+    })
   });
 
 app.get('/blogs', function (req, res) {
-    res.render('blogs')
+    res.render('blogs', {
+      titulo: "AtroBlog by Lucas Gebhardt"
+    })
   });
 
 app.get('/dailyimagen', function (req, res) {
-    res.render('dailyimagen')
+    res.render('dailyimagen', {
+      titulo: "AtroBlog by Lucas Gebhardt"
+    })
   });
 
 app.get('/', function (req, res) {
-    res.render('index')
+    res.render('index', {
+      titulo: "AtroBlog by Lucas Gebhardt"
+    })
   });
 
 app.get('/perfil', function (req, res) {
-    res.render('perfil')
+    res.render('perfil', {
+      titulo: "AtroBlog by Lucas Gebhardt"
+    })
   });
 
 app.get('/post1', function (req, res) {
-    res.render('post1')
+    res.render('post1', {
+      titulo: "AtroBlog by Lucas Gebhardt"
+    })
   });
 
 app.get('/post2', function (req, res) {
-    res.render('post2')
+    res.render('post2', {
+      titulo: "AtroBlog by Lucas Gebhardt"
+    })
   });
 
 app.get('/post3', function (req, res) {
-    res.render('post3')
+    res.render('post3', {
+      titulo: "AtroBlog by Lucas Gebhardt"
+    })
   });
 
 app.listen(port, () => {

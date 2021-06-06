@@ -104,7 +104,7 @@ nav .profile-link a {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     height: 900px;
-    background-image: url('../assets/img/Cover.png');
+    background-image: url('../img/Cover.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -193,6 +193,25 @@ nav .profile-link a {
     width: 100%;
 }
 
+.daily-img-container {
+    display: grid;
+    align-items: center;
+    background-color: white;
+    padding: 0 50px 40px;
+}
+
+.dailyimg-button {
+    text-align: center;
+    border-bottom: 1px solid #84a9ac; 
+      
+}
+
+.daily-img-container p {
+    text-align: center;    
+        
+}
+
+
 .next-page {
     display: grid;
     grid-column: 1;
@@ -200,6 +219,7 @@ nav .profile-link a {
     margin-bottom: 50px;
     font-family: 'Abel', monospace;
 }
+
 
 footer {
     width: 100%;
@@ -293,3 +313,5 @@ footer p {
 .proyect-container {
     padding: 0 5px;
 }
+
+
