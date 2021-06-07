@@ -2,9 +2,9 @@
   "name": "astroblog",
   "version": "1.0.0",
   "description": "Blog de Astronomia",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,9 @@
   "dependencies": {
     "express": "^4.17.1",
     "handlebars": "^4.7.7",
-    "hbs": "^4.1.2"
+    "hbs": "^4.1.2",
+    "request": "^2.81.0",
+    "superagent": "^3.5.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"

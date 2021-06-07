@@ -1,8 +1,8 @@
 const express = require('express');
 const hbs = require('hbs');
 const app = express();
-// const path = require('path') este no iría con
 
+//cofigura variable de entorno
 const port = process.env.PORT || 3000;
 
 //TODO: Requerimos de (hbs);
@@ -13,9 +13,10 @@ hbs.registerPartials( __dirname + '/views/partials');
 
 
 
-//rutas para servir contenido estástico
+//sirve contenido estástico
 app.use( express.static('public'));
 
+//Rutas
 app.get('/blog', function (req, res) {
     res.render('blog', {
       titulo: "AtroBlog by Lucas Gebhardt"
@@ -68,3 +69,4 @@ app.listen(port, () => {
 
     console.log(`Escuchando el servidor en el puerto http://localhost:${port}`);
 });
+
