@@ -2,9 +2,10 @@
   "name": "astroblog",
   "version": "1.0.0",
   "description": "Blog de Astronomia",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "dev": "nodemon --watch server.js"
   },
   "repository": {
     "type": "git",
